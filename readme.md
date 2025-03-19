@@ -43,6 +43,6 @@ Tumor categories:
 
 ## 🧑‍💻 Contributors
 
-- **Ekaterina Akimenko** – Research on encoding techniques & preprocessing
-- **Sofia Goryunova** – SNN architecture & STDP implementation
-- **Yasmina Mamadalieva** – Dataset preparation & CNN development
+- **Ekaterina Akimenko** 
+- **Sofia Goryunova**
+- **Yasmina Mamadalieva** 

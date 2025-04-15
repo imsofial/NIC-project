@@ -52,7 +52,7 @@ Tumor categories:
 - For SNN: Encoded images into **spike trains**.
 
 ### 🧠 SNN Implementation
-I- mplemented using snntorch
+- Implemented using snntorch
 - Learning via backpropagation with surrogate gradients
 - Uses Leaky Integrate-and-Fire neurons (LIF)
 - Temporal encoding via rate-based spike generation

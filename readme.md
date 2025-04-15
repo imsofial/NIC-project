@@ -3,6 +3,7 @@
 ## 📌 Project Description
 
 This project aims to classify brain tumors from MRI scans using **Spiking Neural Networks (SNNs)**. We explore the effectiveness of SNNs compared to traditional Convolutional Neural Networks (CNNs) for image classification. The goal is to evaluate how SNNs perform in terms of accuracy and efficiency when applied to medical imaging.
+
 ---
 
 ## 🔧 Technologies & Tools
@@ -46,6 +47,7 @@ Tumor categories:
 ✔️ Rate-based spike encoding  
 ✔️ Comparing SNN and CNN using evaluation metrics (accuracy, precision, recall, F1-score)  
 ✔️ Analyzing results and visualization  
+
 ---
 
 ## 🛠 Methodology

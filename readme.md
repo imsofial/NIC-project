@@ -39,11 +39,11 @@ Tumor categories:
 ## 🎯 Workflow
 
 ✔️ Image preprocessing (grayscale, resizing, normalization)  
-✔️ CNN: classic convolutional layers + data augmentation
-✔️ SNN: LIF neurons using surrogate gradient learning
-✔️ Rate-based spike encoding
+✔️ CNN: classic convolutional layers + data augmentation  
+✔️ SNN: LIF neurons using surrogate gradient learning  
+✔️ Rate-based spike encoding  
 ✔️ Comparing SNN and CNN using evaluation metrics (accuracy, precision, recall, F1-score)  
-✔️ Analyzing results and visualization
+✔️ Analyzing results and visualization  
 
 ---
 

@@ -34,6 +34,8 @@ Tumor categories:
 - Pituitary Tumor
 - No Tumor
 
+--
+
 ## 🎯 Workflow
 
 ✔️ Image preprocessing (grayscale, resizing, normalization)  

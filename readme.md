@@ -4,6 +4,8 @@
 
 This project aims to classify brain tumors from MRI scans using Spiking Neural Networks (SNNs). We explore the effectiveness of SNNs compared to traditional Convolutional Neural Networks (CNNs) for image classification. The goal is to evaluate whether SNNs provide advantages in terms of accuracy and computational efficiency.
 
+---
+
 ## 🔧 Technologies & Tools
 
 - Python
@@ -12,6 +14,8 @@ This project aims to classify brain tumors from MRI scans using Spiking Neural N
 - TensorFlow / Keras (for CNN baseline)
 - scikit-learn (for evaluation metrics)
 - OpenCV, NumPy, Matplotlib (for preprocessing and visualization)
+
+---
 
 ## 📂 Repository Structure
 
@@ -22,6 +26,7 @@ This project aims to classify brain tumors from MRI scans using Spiking Neural N
 │── results.ipynb                   # Visualizations and evaluation results
 │── readme.md                       # This file
 ```
+---
 
 ## 📊 Dataset
 

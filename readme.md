@@ -8,9 +8,10 @@ This project aims to classify brain tumors from MRI scans using Spiking Neural N
 
 - Python
 - Jupyter Notebook
-- TensorFlow (Keras) / PyTorch (for CNNs)
-- Brian2 / BindsNET (for SNNs)
-- OpenCV / NumPy / Matplotlib/ Sklearn (for image preprocessing)
+- PyTorch + snntorch (for SNN implementation)
+- TensorFlow / Keras (for CNN baseline)
+- scikit-learn (for evaluation metrics)
+- OpenCV, NumPy, Matplotlib (for preprocessing and visualization)
 
 ## 📂 Repository Structure
 
@@ -35,9 +36,10 @@ Tumor categories:
 
 ## 🎯 Workflow
 
-✔️ Image preprocessing (normalization, noise reduction)  
-✔️ Encoding images into spike trains  
-✔️ Training an SNN using STDP learning rule  
+✔️ Image preprocessing (grayscale, resizing, normalization)  
+✔️ CNN: classic convolutional layers + data augmentation
+✔️ SNN: LIF neurons using surrogate gradient learning
+✔️ Rate-based spike encoding
 ✔️ Comparing SNN and CNN using evaluation metrics (accuracy, precision, recall, F1-score)  
 ✔️ Analyzing results and visualization
 
@@ -46,16 +48,17 @@ Tumor categories:
 ## 🛠 Methodology
 
 ### 🧬 Preprocessing
-- All MRI images are resized (e.g., 240x240).
-- Pixel values normalized.
-- Optional augmentation for CNN (rotation, zoom, flip).
-- For SNN: Encoded images into **spike trains**.
+- All images resized to 240x240 (CNN) and 64x64 (SNN)
+- Normalized pixel values to [-1, 1]
+- CNN: data augmentation (rotation, flips, zoom)
+- SNN: grayscale + spike encoding over 10 timesteps
 
 ### 🧠 SNN Implementation
-- Implemented using snntorch
-- Learning via backpropagation with surrogate gradients
-- Uses Leaky Integrate-and-Fire neurons (LIF)
+- Implemented using snntorch (based on PyTorch)
+- Neuron type: Leaky Integrate-and-Fire (LIF)
+- Learning method: backpropagation with surrogate gradients
 - Temporal encoding via rate-based spike generation
+- Final classification via fully connected layer
 
 ### 🤖 CNN Implementation
 - Architecture:
@@ -85,40 +88,41 @@ Tumor categories:
 | 5-6  | Training both models & evaluations                 | All                        |
 | 7-8  | Visualization, reporting, and final presentation   | All                        |
 
+---
 
 ### 📌 Week 1–2: Research & Preprocessing
-- **Goal:** Understand SNNs and data preprocessing
+- **Goal:** Study SNNs and prepare dataset
 - **Tasks:**
-    - 📚 *Ekaterina*: Researched spike encoding strategies and initial data cleaning
-    - 🧠 *Sofia*: Studied SNN architectures and the STDP learning rule
-    - 🗂️ *Yasmina*: Prepared and structured the dataset for training
+  - 📚 *Ekaterina*: Researched rate-based spike encoding and SNN neuron models (LIF)
+  - 🧠 *Sofia*: Investigated surrogate gradient learning and neuron behavior in `snntorch`
+  - 🗂️ *Yasmina*: Organized the dataset into train/test folders and implemented basic preprocessing pipelines
 
 ---
 
-### 📌 Week 3–4: SNN Development
-- **Goal:** Build and train the SNN model
+### 📌 Week 3–4: SNN & CNN Implementation
+- **Goal:** Implement SNN and CNN models
 - **Tasks:**
-    - 👩‍💻 *Ekaterina*: Implemented the SNN using `Brian2`/`BindsNET`
-    - 🔧 *Sofia*: Designed and tuned the learning process for the SNN
-    - 🤖 *Yasmina*: Set up the CNN baseline model for comparison
+  - 👩‍💻 *Ekaterina*: Built the SNN architecture using `snntorch` with surrogate gradients and LIF neurons
+  - 🔧 *Sofia*: Integrated spike encoding pipeline and helped implement dropout, normalization, and pooling
+  - 🤖 *Yasmina*: Implemented the CNN baseline using Keras with augmentation and softmax classifier
 
 ---
 
-### 📌 Week 5–6: Training & Evaluation
-- **Goal:** Train and compare both models
+### 📌 Week 5–6: Model Training & Evaluation
+- **Goal:** Train both models and compare results
 - **Tasks:**
-    - 🧪 *Ekaterina*: Finalized training of the SNN and logged results
-    - 🔍 *Sofia*: Trained CNN and benchmarked against SNN
-    - 📊 *Yasmina*: Aggregated all metrics (accuracy, F1, confusion matrix)
+  - 🧪 *Ekaterina*: Trained the SNN model, monitored training dynamics, and optimized accuracy
+  - 🔍 *Sofia*: Supported training and helped evaluate both models using precision/recall/F1
+  - 📊 *Yasmina*: Trained the CNN, collected confusion matrices, and evaluated both models on full test set
 
 ---
 
-### 📌 Week 7–8: Analysis & Reporting
-- **Goal:** Visualize, report, and present findings
+### 📌 Week 7–8: Final Analysis & Reporting
+- **Goal:** Evaluate models, visualize metrics, and write final report
 - **Tasks:**
-    - 📈 *Ekaterina*: Created result visualizations and performance graphs
-    - 📝 *Sofia*: Wrote final analysis and conclusions
-    - 🎤 *Yasmina*: Compiled final report and built presentation slides
+  - 📈 *Ekaterina*: Produced result plots and cross-model performance comparisons
+  - 📝 *Sofia*: Wrote the results, analysis, and key insights sections
+  - 🎤 *Yasmina*: Prepared final report, README, and presentation slides for submission
 
 ---
 
@@ -137,8 +141,7 @@ Tumor categories:
 ## 📚 References
 
 - 🧠 [Kaggle Dataset – Brain Tumor MRI](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
-- 🧬 [Brian2 Documentation](https://brian2.readthedocs.io/en/stable/)
-- ⚡ [BindsNET Library](https://bindsnet-docs.readthedocs.io/en/stable/)
+- 🧬 [snntorch Documentation](https://snntorch.readthedocs.io/)
 - 🧠 [Spiking Neural Networks (SNN) Paper](https://arxiv.org/abs/1808.02564)
 
 ---

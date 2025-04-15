@@ -52,9 +52,10 @@ Tumor categories:
 - For SNN: Encoded images into **spike trains**.
 
 ### 🧠 SNN Implementation
-- Implemented using **Brian2 / BindsNET**.
-- Learning via **STDP (Spike-Timing Dependent Plasticity)**.
-- Evaluation with test split using temporal input encodings.
+I- mplemented using snntorch
+- Learning via backpropagation with surrogate gradients
+- Uses Leaky Integrate-and-Fire neurons (LIF)
+- Temporal encoding via rate-based spike generation
 
 ### 🤖 CNN Implementation
 - Architecture:
